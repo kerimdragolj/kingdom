@@ -1,0 +1,26 @@
+<label class="col-lg-offset-3 col-xs-offset-1 reg-headline">Register:</label>
+<div class="container input-group col-lg-offset-3 col-lg-6 reg-form">
+  <form (submit)="onRegisterSubmit()">
+    <div class="form-group">
+      <label>Full name:</label>
+      <input pattern=".{5,}" title="5 characters minimum" class="form-control" [(ngModel)]="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label>Username:</label>
+      <input class="form-control" [(ngModel)]="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label>Email:</label>
+      <input class="form-control" [(ngModel)]="email" name="email" required>
+    </div>
+      <div class="form-group">
+        <label>Password:</label>
+        <input type="password" pattern=".{5,}" required title="5 characters minimum"  class="form-control" [(ngModel)]="password" name="password" #passwordval>
+      </div>
+      <div class="form-group" >
+        <label>Confirm password:</label>
+        <input type="password" pattern=".{5,}" required title="5 characters minimum" (keyup)="onPasswordInput(passwordval.value, confPasswordval.value)" class="form-control" [(ngModel)]="confPassword" name="confPassword" id="confPassword" #confPasswordval>
+      </div>
+    <button class="btn btn-primary">Submit</button>
+  </form>
+</div>

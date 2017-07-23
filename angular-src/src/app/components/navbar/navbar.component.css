@@ -1,0 +1,16 @@
+.navbar-default .navbar-nav > li > a {
+  color: #000;
+}
+
+.navbar-nav > .active > a, .navbar-nav > .active > a:hover {
+  border-color:darkgray;
+  background-color: #eff4ff;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  margin-top: 4px;
+}
+
+.navbar-form {
+ padding-top: 10px;
+}

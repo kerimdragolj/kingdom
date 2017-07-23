@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <label class="log-headline col-lg-offset-3"> Login: </label>
+  <form (submit)="onLoginSubmit()">
+    <div class="login-form form-group col-lg-6 col-lg-offset-3">
+      <div class="form-group" (submit)="onLoginSubmit()">
+        <label> Username: </label>
+        <input type="text" placeholder="Username.." class="form-control" [(ngModel)]="username" name="username">
+      </div>
+      <div class="form-group">
+        <label> Password: </label>
+        <input type="password" placeholder="Password.." class="form-control" [(ngModel)]="password" name="password">
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" value="">Remember me</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Log in</button>
+    </div>
+  </form>
+</div>
